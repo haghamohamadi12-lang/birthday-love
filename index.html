@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My One and Only ♡</title>
+<style>
+:root{--night:#10162f;--night2:#211b3a;--white:#f8f8ff;--silver:#dce4f6}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--white);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(ellipse at 50% 0%,#343052 0%,#1b1c39 42%,#0c142b 100%);overflow-x:hidden}
+.sky{position:fixed;inset:0;overflow:hidden;pointer-events:none}
+.star{position:absolute;width:3px;height:3px;background:#fff;border-radius:50%;opacity:.8;box-shadow:0 0 10px #fff;animation:twinkle 3s infinite ease-in-out}
+@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.7)}50%{opacity:1;transform:scale(1.35)}}
+.moon{position:absolute;top:7%;right:12%;width:105px;height:105px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#e7edf8 58%,#bac8df);box-shadow:0 0 35px #e8efff88,0 0 95px #dbe7ff55}
+.cloud{position:absolute;width:220px;height:65px;background:#f8faff;border-radius:60px;filter:drop-shadow(0 8px 18px #cbd9ff35);opacity:.92}
+.cloud:before,.cloud:after{content:"";position:absolute;background:#f8faff;border-radius:50%}
+.cloud:before{width:95px;height:95px;left:35px;top:-42px}.cloud:after{width:115px;height:115px;right:28px;top:-57px}
+.c1{top:19%;left:-70px;transform:scale(.75)}.c2{top:31%;right:-80px;transform:scale(.65)}.c3{bottom:10%;left:8%;transform:scale(.5);opacity:.55}
+.wrap{position:relative;z-index:1;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:35px 18px}
+.panel{width:min(680px,100%);text-align:center;padding:42px 28px 38px;border:1px solid #ffffff26;border-radius:28px;background:linear-gradient(145deg,#ffffff12,#ffffff05);backdrop-filter:blur(8px);box-shadow:0 25px 90px #05091b66}
+.eyebrow{letter-spacing:.28em;font:11px Arial,sans-serif;color:#d9e2f5;margin-bottom:20px}
+h1{font-size:clamp(38px,8vw,66px);font-weight:normal;line-height:1.08;margin:0 0 10px;text-shadow:0 0 25px #fff5}
+h2{font-size:clamp(28px,6vw,43px);font-weight:normal;font-style:italic;margin:0 0 24px}
+.heart{display:inline-block;color:#fff;font-size:.8em;text-shadow:0 0 15px #fff;animation:pulse 2s infinite}
+@keyframes pulse{50%{transform:scale(1.18)}}
+.intro{font-size:18px;line-height:1.8;color:#e5eaf6;max-width:510px;margin:0 auto 28px}
+button{border:1px solid #ffffff88;background:#ffffff18;color:white;border-radius:999px;padding:15px 25px;font-size:14px;letter-spacing:.04em;cursor:pointer;transition:.25s}
+button:hover{background:#ffffff30;transform:translateY(-2px);box-shadow:0 0 25px #fff3}
+.hint{font:11px Arial,sans-serif;color:#cbd4e8;margin-top:24px;letter-spacing:.08em}
+#letter{display:none;text-align:left;margin:30px auto 0;max-width:540px;border-top:1px solid #ffffff35;padding-top:25px;animation:appear .8s ease}
+#letter h3{text-align:center;font-size:27px;font-weight:normal;margin:0 0 20px}
+#letter p{font-size:17px;line-height:1.85;color:#edf0fa;margin:0 0 15px}
+.sign{text-align:center!important;margin-top:25px!important;font-style:italic}
+.smallheart{text-align:center;color:#fff;font-size:24px;margin-top:8px}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:500px){.panel{padding:35px 21px}.moon{width:75px;height:75px;right:8%;top:5%}.intro{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true" id="sky">
+  <div class="moon"></div><div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+</div>
+<main class="wrap">
+<section class="panel">
+  <div class="eyebrow">A LITTLE SURPRISE FOR YOU</div>
+  <h1>Happy Birthday,</h1>
+  <h2>My One and Only <span class="heart">♥</span></h2>
+  <p class="intro">No matter how many miles separate us, you will always have a special place in my heart.</p>
+  <button id="openBtn" type="button">Open Your Birthday Surprise ✨</button>
+  <div class="hint">♡  FOREVER YOUR ONE AND ONLY  ♡</div>
+  <article id="letter">
+    <h3>To My One and Only, 🤍</h3>
+    <p>Happy Birthday to the most special person in my life.</p>
+    <p>I wish I could be there with you today, celebrate your special day, see your smile, and make beautiful memories together.</p>
+    <p>Even though miles separate us, I hope you never forget how much you mean to me. Distance may keep us apart, but it could never change the place you have in my heart.</p>
+    <p>You deserve all the happiness in the world, all the love your heart can hold, and a thousand beautiful moments.</p>
+    <p>If I could make one birthday wish for you, it would be to see you happy, today and every day after.</p>
+    <p>Thank you for being you, for being part of my life, and for making my world a little more beautiful.</p>
+    <p><strong>Happy Birthday, My One and Only.</strong></p>
+    <p>No matter how far you are, a little piece of my heart will always be with you.</p>
+    <p class="sign">With all my love, ♡</p>
+    <div class="smallheart">♥</div>
+  </article>
+</section>
+</main>
+<script>
+const sky=document.getElementById('sky');
+for(let i=0;i<75;i++){const s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=(Math.random()*4)+'s';s.style.opacity=(.25+Math.random()*.7);sky.appendChild(s)}
+document.getElementById('openBtn').addEventListener('click',()=>{document.getElementById('letter').style.display='block';document.getElementById('openBtn').textContent='A little letter, just for you 🤍';document.getElementById('letter').scrollIntoView({behavior:'smooth',block:'nearest'})});
+</script>
+</body>
+</html>
